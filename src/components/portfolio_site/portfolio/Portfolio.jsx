@@ -1,8 +1,8 @@
 import "./portfolio.scss"
 import {useState,useEffect} from "react";
 import { Component } from 'react';
-import PortfolioList from "../portfolioList/PortfolioList";
-import { featuredPortfolio,webPortfolio, mobilePortfolio , designPortfolio , contentPortfolio } from "../../data";
+import PortfolioList from "..//portfolioList/PortfolioList";
+import { featuredPortfolio,webPortfolio, mobilePortfolio , designPortfolio , contentPortfolio } from "../../../data";
 
 export default function Portfolio() {
 
@@ -30,8 +30,6 @@ export default function Portfolio() {
             id: "content",
             title:"Content",
         },
-            
-
     ]
     useEffect( 
         ()=>{ 
@@ -70,17 +68,17 @@ export default function Portfolio() {
             </ul>
             <div className="container">
                 {data.map(d=>( 
-
-               
                 <div className="item">
-                <img src={d.img} alt="" />
-                <h3>{d.title}</h3>
-
-                </div>
-                 ))}
-                
+                 <img src={d.img} alt="" /> 
+                <h3>{d.title}</h3> 
             </div>
-            
+                 ))}
+            </div>
         </div>
-    )
-}
+    ) 
+}  
+  
+
+  
+
+                                                                                        
