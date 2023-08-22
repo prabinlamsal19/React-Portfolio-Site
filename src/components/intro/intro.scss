@@ -1,11 +1,12 @@
-.intro{ 
+.intro {
     background-color: white;
-    display: flex; 
-    .left{ 
-        flex:0.5 ;
+    display: flex;
+
+    .left {
+        flex: 0.5;
         overflow: hidden;
 
-        .imgContainer{ 
+        .imgContainer {
             width: 500px;
             height: 500px;
             background-color: rgba(0, 0, 0, 0.473);
@@ -14,16 +15,18 @@
             justify-content: center;
             overflow: hidden;
             float: right;
-            
-            img{   
-            width: 100%;
+
+            img {
+                width: 100%;
             }
         }
     }
-    .right{ 
+
+    .right {
         flex: 0.5;
         position: relative;
-        .wrapper{ 
+
+        .wrapper {
             width: 100%;
             height: 100%;
             padding-left: 50px;
@@ -31,48 +34,72 @@
             flex-direction: column;
             justify-content: center;
 
-            h1{ 
-            font-size: 60px;
-            margin: 10px 0;
+            h1 {
+                font-size: 60px;
+                margin: 10px 0;
 
             }
-            h2{ 
-               font-size: 35px; 
+
+            h2 {
+                font-size: 35px;
             }
-            h3{ 
+
+            h3 {
                 font-size: 30px;
                 color: crimson;
-                span{ 
+
+                span {
                     font-size: inherit;
                     color: crimson;
                 }
-                .ityped-cursor{ 
+
+                .ityped-cursor {
                     animation: blink 1s infinite;
                 }
-                @keyframes blink{ 
-                    100%{ 
+
+                @keyframes blink {
+                    100% {
                         opacity: 100%;
                     }
                 }
             }
-            
+
         }
-        a{
+
+        a {
             position: absolute;
             bottom: 10px;
             left: 40%;
-            
-            img{ 
+
+            img {
                 width: 30px;
                 height: 30px;
                 animation: arrowBlink 2s infinite;
             }
-            @keyframes arrowBlink{ 
-                100%{ 
-                    opacity:0;
+
+            @keyframes arrowBlink {
+                100% {
+                    opacity: 0;
                 }
             }
 
+        }
+    }
+}
+
+/* Media query for screens with a maximum width of 768 pixels */
+@media (max-width: 992px) {
+
+    /* Change font size and padding for smaller screens */
+    .intro {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        .left .imgContainer {
+            width: 390px;
+            height: 390px;
         }
     }
 }
