@@ -11,7 +11,7 @@ export default function Works() {
         {
             id: "1",
             title: "Travel Nepal",
-            desc: "Flutter and Firebase used to create an application for international and national tourists that come to Nepal. App specific chatbot implemented in python.",
+            desc: "Complete Travel Application with AI chatbot.",
             icon: "assets/mobile.png",
             img: "assets/travelnepal.jpg"
         },
@@ -29,7 +29,7 @@ export default function Works() {
             icon: "assets/globe.png",
             img: "assets/booksforme.jpg"
         },
-       
+
         {
             id: "4",
             title: "Criptify",
