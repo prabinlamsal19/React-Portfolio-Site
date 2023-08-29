@@ -1,86 +1,79 @@
 import "./portfolio.scss"
-import {useState,useEffect} from "react";
+import { useState, useEffect } from "react";
 import { Component } from 'react';
 import PortfolioList from "../portfolioList/PortfolioList";
-import { featuredPortfolio,webPortfolio, mobilePortfolio , designPortfolio , contentPortfolio } from "../../data";
+import { featuredPortfolio, webPortfolio, mobilePortfolio, designPortfolio, contentPortfolio } from "../../data";
 
 export default function Portfolio() {
 
-    const[selected,setSelected]=useState("featured");
-    const[data,setdata]=useState([]);
+    const [selected, setSelected] = useState("featured");
+    const [data, setdata] = useState([]);
 
-    const list= [ 
-       {
-        id: "featured",
-        title:"Machine Learning",
+    const list = [
+        {
+            id: "featured",
+            title: "Machine Learning",
         },
         {
             id: "web",
-            title:"Webapps",
+            title: "Webapps",
         },
         {
             id: "mobile",
-            title:"Flutter",
+            title: "Flutter",
         },
         {
             id: "design",
-            title:"Design",
+            title: "Design",
         },
         {
             id: "content",
-            title:"Content",
+            title: "Content",
         },
-            
+
 
     ]
-    useEffect( 
-        ()=>{ 
-            switch(selected){ 
-                case "featured": 
+    useEffect(
+        () => {
+            switch (selected) {
+                case "featured":
                     setdata(featuredPortfolio);
                     break;
-                case "web": 
+                case "web":
                     setdata(webPortfolio);
                     break;
-                case "mobile": 
+                case "mobile":
                     setdata(mobilePortfolio);
                     break;
-                case "design": 
+                case "design":
                     setdata(designPortfolio);
                     break;
-                case "content": 
-                    setdata(contentPortfolio);
-                    break;
-                default: 
+                default:
                     setdata(mobilePortfolio);
             }
-        },[selected]                 //whenever "selected" is changed, useEffect is called
+        }, [selected]                 //whenever "selected" is changed, useEffect is called
     )
     return (
         <div className="portfolio" id="portfolio">
             <h1>Portfolio</h1>
             <ul>
-               {list.map(item=>( 
-                   <PortfolioList title={item.title} 
-                   active={selected === item.id} 
-                   setSelected={setSelected} 
-                   id={item.id}
-                   />
-               ))} 
+                {list.map(item => (
+                    <PortfolioList title={item.title}
+                        active={selected === item.id}
+                        setSelected={setSelected}
+                        id={item.id}
+                    />
+                ))}
             </ul>
             <div className="container">
-                {data.map(d=>( 
-
-               
-                <div className="item">
-                <img src={d.img} alt="" />
-                <h3>{d.title}</h3>
-
-                </div>
-                 ))}
-                
+                {data.map(d => (
+                    <div className="item">
+                        <img src={d.img} alt="" />
+                        <h3>{d.title}</h3>
+                    </div>
+                ))}
             </div>
-            
+
         </div>
     )
 }
