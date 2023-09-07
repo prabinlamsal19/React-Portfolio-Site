@@ -59,7 +59,7 @@ export default function Works() {
                                     </div>
                                     <h2>{d.title}</h2>
                                     <p>{d.desc} </p>
-                                    <span>Projects</span>
+                                    {/* <span>Projects</span> */}
                                 </div>
                             </div>
                             <div className="right">

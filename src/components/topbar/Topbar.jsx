@@ -14,11 +14,11 @@ export default function Topbar({menuOpen, setMenuOpen}) {
                         <a href='#intro' className="logo"> KU</a>
                         <div className="itemContainer">
                                   <Person className='icon'/> 
-                                <span>lamsalprabin74@gmail.com</span>
+                                <span>prabin.netlify.app</span>
                         </div>
                         <div className="itemContainer">
                                 <Mail/> 
-                                <span>+977 9846825271</span>
+                                <span>prabinlamsal74@gmail.com</span>
                         </div>
                     </div>
                     <div className="right">

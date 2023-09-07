@@ -21,7 +21,10 @@
             padding: 7px;
             border-radius: 10px;
             cursor: pointer;
-            overflow: hidden;
+            overflow: hidden; 
+            @media(max-width: 464px){ 
+                font-size: 10px;
+            }
 
             &.active {
                 background-color: black;

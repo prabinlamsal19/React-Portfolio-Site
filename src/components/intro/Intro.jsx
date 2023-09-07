@@ -27,7 +27,7 @@ export default function Intro() {
                 <h3>-  <span ref={textRef}></span></h3>
                 </div>
                 <a href="#portfolio"> 
-                <img src="assets/down.png" alt="" />
+                {/* <img src="assets/down.png" alt="" /> */}
                 </a>
                 {/* <a href="github.com/prabinlamsal19">github</a> */}
                 </div>

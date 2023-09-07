@@ -10,41 +10,72 @@
     z-index: 3;
     transition: all 2s ease;
 
-
     .wrapper{ 
-
         padding: 10px 30px;
         display:flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-between;  
+
+        @media(max-width: 380px){ 
+            padding: 10px 10px
+        } 
 
         .left{ 
             display: flex;
-            align-items: center;
+            align-items: center;  
+
+           
+
             .logo{ 
                 font-size: 40px;
                 font-weight: 700;
                 text-decoration: none;
                 color: inherit;
-                margin-right: 40px;
+                margin-right: 40px; 
+
+                @media(max-width: 640px){ 
+                    font-size: 30px;
+                    font-weight: 500;
+                    margin-right: 3px;
+                }  
+                @media(max-width: 380px){ 
+                    display: none;
+                    margin-right: 0px;
+                } 
+                
             }
+
             .itemContainer{ 
                 display: flex;
                 align-items: center;
-                margin-left: 30px;
+                margin-left: 30px; 
+
+                @media(max-width: 640px){ 
+                    margin-left: 5px;
+                }  
 
                 .icon{ 
                 font-size: 18;
-                margin-right: 5px;
-                }
+                margin-right: 3px; 
+
+                @media(max-width: 640px){ 
+                    font-size: 13px;
+                    font-weight: 300;
+                }}
+
                 span{ 
                     font-size: 15;
-                    font-weight: 400   ;
+                    font-weight: 400; 
+
+                    @media(max-width: 640px){ 
+                        font-size: 10px;
+                        font-weight: 300;
+                    }
                 }
             }
         }
+
         .right{ 
-            
             .hamburger{ 
                 width: 32px;
                 height: 25px;
@@ -58,14 +89,19 @@
                     background-color: black;
                     transform-origin: left;
                     transition: all 2s ease;
+                } 
+
+                @media(max-width: 640px){ 
+                    width: 24px; 
+                    height: 18.75px;
                 }
             }
         }
     }
+
     &.active{ 
       background-color: black;
         color: white;
-
         .hamburger{ 
             span{ 
                 &:first-child{ 
