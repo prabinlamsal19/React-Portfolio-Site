@@ -29,17 +29,21 @@
         transition: all 1s ease-out;
 
         .container {
+            width: 100vw;
             display: flex;
             align-items: center;
-            justify-content: center;
-
+            justify-content: center; 
+ 
             .item {
-                height: 100%;
+                height: 100%; 
+                width: 700px;
                 background-color: white;
                 border-radius: 20px;
                 display: flex;
                 align-items: center;
-                justify-content: center;
+                justify-content: center; 
+                margin-right: 20vh;
+                margin-left: 20vh;
 
                 .left {
                     flex: 4;
@@ -151,7 +155,7 @@
 
 } 
 
-@media(max-width: 572px) {
+@media(max-width: 740px) {
     .works {
         display: flex; 
         align-items: center;
@@ -181,9 +185,8 @@
                 align-items: center; 
                 align-self: center;
                 justify-content: center; 
-                background-color: red; 
 
-                @media(max-width: 420px) { 
+                @media(max-width: 500px) { 
                     height: 200px;
                 }
     
@@ -194,9 +197,17 @@
                     flex-direction: column;
                     align-items: center;
                     justify-content: center; 
-                    @media(max-width: 420px) { 
-                        margin-right: 3vh;
-                        margin-left: 3vh;
+                    @media(max-width: 600px) { 
+                        margin-right: 12vh;
+                        margin-left: 12vh;
+                    }  
+                    @media(max-width: 474px) { 
+                        margin-right: 8vh;
+                        margin-left: 8vh;
+                    } 
+                    @media(max-width: 400px) { 
+                        margin-right: 4vh;
+                        margin-left: 4vh;
                     }   
                    
                     .left {
@@ -243,7 +254,7 @@
                                 font-size: 20px;
                                 overflow: hidden;
 
-                                @media(max-width: 420px) { 
+                                @media(max-width: 600px) { 
                                     font-size: 15px
                                 }
                             }
